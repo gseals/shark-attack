@@ -1,28 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <button className='btn btn-danger'>This is the stuff you're looking for</button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import studentsData from '../helpers/data/studentsData';
+
+import SharkTank from '../components/components/ShartTank/SharkTank';
+
+class App extends React.Component {
+  state = {
+    students: [],
+  }
+
+  componentDidMount() {
+    const students = studentsData.livingStudents();
+    this.setState({ students });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h1>Shark Tank</h1>
+          <button className='btn btn-danger'>SHARK ATTACK</button>
+          <SharkTank students={this.state.students} />
+      </div>
+    );
+  }
 }
 
 export default App;
