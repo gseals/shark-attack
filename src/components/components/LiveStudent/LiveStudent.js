@@ -14,7 +14,7 @@ class LiveStudents extends React.Component {
     return (
       <div className="card col-3">
         <div className="card-body">
-          <h5 className="card-title">{student.firstName} + {student.lastName}</h5>
+          <h5 className="card-title">{student.firstName} {student.lastName}</h5>
         </div>
       </div>
     );
