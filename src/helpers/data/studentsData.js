@@ -159,4 +159,13 @@ const dearlyBeloved = () => {
   return deadStudents;
 };
 
-export default { livingStudents, dearlyBeloved };
+const followTheLight = () => {
+  const randomId = (Math.floor(Math.random() * 23));
+  students.forEach((response) => {
+    if (response.id.number() === randomId) {
+      response.isDead = true;
+    }
+  });
+};
+
+export default { livingStudents, dearlyBeloved, followTheLight };
