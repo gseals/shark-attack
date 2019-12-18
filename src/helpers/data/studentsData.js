@@ -135,7 +135,7 @@ const students = [
     id: '23',
     firstName: 'Raymond',
     lastName: 'Arceneaux',
-    isDead: false,
+    isDead: true,
   },
 ];
 

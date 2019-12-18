@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LivingStudents from '../LiveStudent/LiveStudent';
-import studentShape from '../../../helpers/propz/studentShade';
+import studentShape from '../../helpers/propz/studentShade';
 
 class SharkTank extends React.Component {
   static propTypes = {
@@ -13,8 +13,8 @@ class SharkTank extends React.Component {
     const studentCards = myStudents.map((student) => <LivingStudents key={student.id} student={student}/>);
 
     return (
-    <div className="sharkTank row">
-      {studentCards}
+    <div className="sharkTank col-6">
+      <div>{studentCards}</div>
     </div>
     );
   }
