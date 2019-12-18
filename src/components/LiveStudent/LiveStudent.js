@@ -5,11 +5,13 @@ import studentShape from '../../helpers/propz/studentShade';
 class LiveStudents extends React.Component {
   static propTypes = {
     student: studentShape.studentShape,
+    followTheLight: PropTypes.func,
   }
 
 
   render() {
     const { student } = this.props;
+    const { followTheLight } = this.props;
 
     return (
       <div className="card col-6">
