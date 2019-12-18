@@ -160,7 +160,6 @@ const dearlyBeloved = () => {
 };
 
 const followTheLight = (id) => {
-  // const randomId = (Math.floor(Math.random() * 23));
   students.forEach((response) => {
     if (response.id === id) {
       response.isDead = true;

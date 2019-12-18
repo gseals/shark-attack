@@ -19,6 +19,13 @@ class App extends React.Component {
     this.setState({ deadOnes });
   }
 
+  // followTheLight = (id) => {
+  //   studentsData.followTheLight(id);
+  //   const students = studentsData.livingStudents();
+  //   this.setState({ students });
+  //   const number = (Math.floor(Math.random() * array.length));
+  // }
+
   render() {
     return (
       <div className="App">
