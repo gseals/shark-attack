@@ -14,25 +14,24 @@ class App extends React.Component {
 
   componentDidMount() {
     const students = studentsData.livingStudents();
-    this.setState({ students });
     const deadOnes = studentsData.dearlyBeloved();
-    this.setState({ deadOnes });
+    this.setState({ students, deadOnes });
   }
 
-  followTheLight = (id) => {
-    studentsData.followTheLight(id);
+  followTheLightEvent = () => {
     const students = studentsData.livingStudents();
-    this.setState({ students });
     const deadOnes = studentsData.dearlyBeloved();
-    this.setState({ deadOnes });
-    // const number = (Math.floor(Math.random() * array.length));
-  }
+    const randomStudent = Math.floor(Math.random() * students.length);
+    const randomStudentId = students[randomStudent].id;
+    studentsData.followTheLight(randomStudentId);
+    this.setState({ students, deadOnes });
+  };
 
   render() {
     return (
       <div className="App">
         <div className="row">
-          <SharkTank className='container' students={this.state.students} follow/>
+          <SharkTank className='container' students={this.state.students} followTheLightEvent={this.followTheLightEvent} />
           <Graveyard className='container' deadOnes={this.state.deadOnes} />
         </div>
     </div>

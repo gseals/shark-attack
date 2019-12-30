@@ -159,9 +159,9 @@ const dearlyBeloved = () => {
   return deadStudents;
 };
 
-const followTheLight = (id) => {
+const followTheLight = (studentId) => {
   students.forEach((response) => {
-    if (response.id === id) {
+    if (response.id === studentId) {
       response.isDead = true;
     }
   });
