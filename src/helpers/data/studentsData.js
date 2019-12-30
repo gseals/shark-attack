@@ -135,7 +135,7 @@ const students = [
     id: '23',
     firstName: 'Raymond',
     lastName: 'Arceneaux',
-    isDead: false,
+    isDead: true,
   },
 ];
 
@@ -160,12 +160,8 @@ const dearlyBeloved = () => {
 };
 
 const followTheLight = (id) => {
-  // const randomId = (Math.floor(Math.random() * 23));
-  students.forEach((response) => {
-    if (response.id === id) {
-      response.isDead = true;
-    }
-  });
+  const studentIndex = students.findIndex((student) => student.id === id);
+  students[studentIndex].isDead = true;
 };
 
 export default { livingStudents, dearlyBeloved, followTheLight };
