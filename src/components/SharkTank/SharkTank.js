@@ -11,7 +11,7 @@ class SharkTank extends React.Component {
   }
 
   removeStudent = (e) => {
-    e.preventdefault();
+    e.preventDefault();
     const { followTheLightEvent } = this.props;
     followTheLightEvent();
   }

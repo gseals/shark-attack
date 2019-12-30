@@ -19,11 +19,11 @@ class App extends React.Component {
   }
 
   followTheLightEvent = () => {
+    const randomStudent = Math.floor(Math.random() * this.state.students.length);
+    const randomStudentId = this.state.students[randomStudent].id;
+    studentsData.followTheLight(randomStudentId);
     const students = studentsData.livingStudents();
     const deadOnes = studentsData.dearlyBeloved();
-    const randomStudent = Math.floor(Math.random() * students.length);
-    const randomStudentId = students[randomStudent].id;
-    studentsData.followTheLight(randomStudentId);
     this.setState({ students, deadOnes });
   };
 
