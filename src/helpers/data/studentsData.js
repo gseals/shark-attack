@@ -158,7 +158,7 @@ const students = [
     firstName: 'Raymond',
     lastName: 'Arceneaux',
     imgUrl: 'https://avatars2.githubusercontent.com/u/40898992?s=400&v=4',
-    isDead: true,
+    isDead: false,
   },
 ];
 
