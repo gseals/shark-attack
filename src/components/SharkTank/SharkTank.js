@@ -21,7 +21,7 @@ class SharkTank extends React.Component {
     const studentCards = myStudents.map((student) => <LivingStudents key={student.id} student={student}/>);
 
     return (
-    <div className="sharkTank col-6">
+    <div className="sharkTank margin col-6">
               <h1>Shark Tank</h1>
           <button className='btn btn-danger' onClick={this.removeStudent}>SHARK ATTACK</button>
       <div>{studentCards}</div>
