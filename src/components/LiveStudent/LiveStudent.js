@@ -12,7 +12,8 @@ class LiveStudents extends React.Component {
 
     return (
       <div className="card col-6">
-        <div className="card-body">
+        <div className="card">
+          <img src={student.imgUrl} className="card-img-top" alt={student.firstName} />
           <h5 className="card-title">{student.firstName} {student.lastName}</h5>
         </div>
       </div>
