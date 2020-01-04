@@ -17,7 +17,7 @@ class Graveyard extends React.Component {
     return (
       <div className="graveYard col-6">
         <h1>Graveyard</h1>
-        {studentCards}
+        <div className="d-flex flex-wrap flex-row">{studentCards}</div>
       </div>
     );
   }
