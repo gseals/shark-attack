@@ -21,10 +21,13 @@ class SharkTank extends React.Component {
     const studentCards = myStudents.map((student) => <LivingStudents key={student.id} student={student}/>);
 
     return (
-    <div className="sharkTank margin col-6">
+    <div className="sharkTank text-center col-6">
               <h1>Shark Tank</h1>
-          <button className='btn btn-danger' onClick={this.removeStudent}>SHARK ATTACK</button>
-      <div>{studentCards}</div>
+              {
+              (myStudents.length === 0) ? (<div><p>Everyone is gone! Refresh to begin again!</p></div>)
+                : (<button className='btn btn-danger' onClick={this.removeStudent}>SHARK ATTACK</button>)
+              }
+      <div className="d-flex flex-wrap flex-row" >{studentCards}</div>
     </div>
     );
   }

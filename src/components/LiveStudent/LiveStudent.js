@@ -1,5 +1,6 @@
 import React from 'react';
 import studentShape from '../../helpers/propz/studentShade';
+import './LiveStudent.scss';
 
 class LiveStudents extends React.Component {
   static propTypes = {
@@ -11,10 +12,10 @@ class LiveStudents extends React.Component {
     const { student } = this.props;
 
     return (
-      <div className="card col-6">
-        <div className="card">
-          <img src={student.imgUrl} className="card-img-top" alt={student.firstName} />
-          <h5 className="card-title">{student.firstName} {student.lastName}</h5>
+      <div className="studentCard col-4">
+        <div>
+          <img src={student.imgUrl} className="card-img-top stImg" alt={student.firstName} />
+          <h5 className="cardTxt">{student.firstName} {student.lastName}</h5>
         </div>
       </div>
     );
