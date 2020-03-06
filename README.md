@@ -29,7 +29,7 @@ Graveyard full
 
 ## Deployed Site/Demo
 
-![Coming Soon](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTHy2SwMRuJKl76xKHxLzqvhAMsFlRn38v9Hxdg8FPibmOcOlA&s)
+[Preview the app here](https://shark-attack-ac41a.firebaseapp.com)
 
 ## Contributors
 
